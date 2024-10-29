@@ -19,13 +19,14 @@ body {
     background: #2CB67D;
     width:  100%;
     align-items: center;
-   justify-content: space-between;
-   padding: 20px;
+    justify-content: space-between;
+    padding: 20px; 
+    box-sizing: border-box; 
 }
 
 #menu .logo{
-    display: flex;
-    align-items: center;
+  display: flex; 
+   align-items: center;
     color: #fff;
 }
 
@@ -36,7 +37,7 @@ body {
 
 #menu .items {
     display: flex;
-    gap: 20px;
+    justify-content: space-evenly;
 }
 #menu .items li {
     list-style: none;
@@ -71,7 +72,10 @@ body {
 /*Dashboard*/
 #interface{
     width:100%;
-    padding: 20px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #interface .navigation{
@@ -81,7 +85,7 @@ body {
     background: #fff;
     padding: 15px 30px;
     border-bottom: 3px solid #594ef7;
-    position: fixed;
+    position:fixed;
     width: 100%;
 }
 
@@ -91,6 +95,7 @@ justify-content: flex-start;
 align-items: center;
 padding: 10px 14px;
 /*border: 1px solid #d7dbe6; */
+border-bottom: 3px solid green;
 text-underline-offset: 2px solid black;
 border-radius: 4px;
 }
