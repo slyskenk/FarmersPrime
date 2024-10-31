@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Namibia Farmers' Disease Reporting Portal</title>
+    <title>Namibia Farmers' Disease </title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -13,9 +13,9 @@
     <button onclick="window.history.back()" class="go-back-btn">
         <i class="fas fa-arrow-left"></i> 
     </button>
-    <h1>Disease Reporting Portal</h1>
+    <h1>Disease Reporting</h1>
 </header>
-
+<div id="testt">
     <h4>Select a Region</h4>
     <select id="regionSelect" onchange="showDiseaseInfo()">
         <option value="">-- Select a Region --</option>
@@ -25,40 +25,12 @@
         <option value="oshana">Oshana Region</option>
 
     </select>
-
-    <div id="diseaseInfo" class="disease-info"></div>
 </div>
-<section>
-    <div class="container">
+    <div id="diseaseInfo" class="disease-info"></div>
     
-        <div class="search-container">
-           <input type="text" id="searchInput" placeholder="Search..." />
-           <button id="searchButton"><i class="fas fa-search"></i>Search</button>
-           <button id="addButton"class="icon-button"><i class="fas fa-plus"></i> Add</button>
-           <button class="icon-button">
-           <i class="fas fa-edit"></i> Edit
-           </button>
-           <button class="icon-button">
-            <i class="fas fa-trash"></i> Delete
-           </button>
-           
-   
-       </div>
-      
-    <div class="cont">
-        <h4>Disease and Treatment Manager</h4>
-        <input type="text" id="diseaseInput" placeholder="Enter disease..." />
-        <input type="text" id="causeInput" placeholder="Enter cause..." />
-        <input type="text" id="treatmentInput" placeholder="Enter treatment..." />
        
-        <ul id="diseaseList"></ul>
-    </div>
 
-    </section>
-</section>
-<footer>All rights reseverd</footer>
-
-<script src="script.js"></script>
+      <script src="script.js"></script>
 
 </body>
 </html>

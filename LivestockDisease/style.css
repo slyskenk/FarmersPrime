@@ -1,4 +1,4 @@
-/*---------------------------Top Navigation Bar-----------------------------------*/
+
 * {
     padding: 0;
     margin: 0;
@@ -9,20 +9,20 @@
     background: green;
     padding:20px 80px;
     align-items: center;
-    justify-content:space-between;
+    justify-content:center;
     box-shadow: 0 5px 15px rgb(0,0,0,0.06); 
     z-index: 999;
     position: sticky;
     top:0;
     left:0;
+    padding-bottom: 50px;
 }
 #navbar {
+    
     display: flex;
     align-items: center;
-    justify-content:space-between;
-    
+   
 }
-
 #navbar li {
     list-style-type: none;
     padding: 0 20px;
@@ -79,207 +79,296 @@ p{
     color:#465b52;
     margin:15px 0 20px 0;
 }
-.section-p1{
-    padding: 40px 80px;
-}
-.section-m1{
-    margin:40px 0;
-}
-body{
+
+.container {
+    position: relative;
     width: 100%;
-}
-.logo{
-    width: 20%;
-    height: 20%;
-}
-#hero{
-    background-image: url(https://wallpapercave.com/wp/wp12678581.jpg) ;
-    height: 90vh;
-    width:100%;
-    background-position: top 25% right 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding:00 80px;
-    display:flex;
-    flex-direction: column;
-    text-align:flex-start;
+    display: flex;
+    align-items: center;
     justify-content: center;
+}
 
-}
-#hero h2{
-    padding:15px;
-    
-}
-#hero h1{
-    color:white
-}
-#case button{
-    background-color: #081010;
-    color:#081010;
-    border:0;
-    padding:14px 80px 14px 65px;
-    background-color: transparent;
-    cursor:pointer;
-    font-weight: 700;
-    font-size:20px ;
-    text-align: center;
-    
-}
-#feature .health{
-    width: 300px ;
-    height: 10px;
-    text-align:center;
-    padding:25px 15px;
-    box-shadow:20px 20px 34px rgb(0,0,0,0.03);
-    border: 1px solid #cce7d0;
-    border-radius:4px;
-    margin:15px 0;
-}
-#feature .health:hover{
-    box-shadow: 10 10px 54px rgba(70,62,221,0.1); 
-
-}
-#feature .health h6{
-    display: inline-block;
-    padding:9px 8px 6px;
-    line-height: 1;
-    border-radius: 4px;
-    color:#088178;
-    background-color: red;
-}
-#feature .health img{
-    width: 70%;
-    margin-bottom: 10px;
-}
-#feature{
-    display:flex;
-    align-items:center;
-    flex-wrap:wrap;
-    padding:20px 80px;
-    justify-content: space-between;
-}
-#feature .report{
-    width: 300px ;
-    text-align:center;
-    padding:25px 15px;
-    box-shadow:20px 20px 34px rgb(0,0,0,0.03);
-    border: 1px solid #cce7d0;
-    border-radius:4px;
-    margin:15px 0;
-}
-#feature .report:hover{
-    box-shadow: 10 10px 54px rgba(70,62,221,0.1); 
-
-}
-#feature .report h6{
-    display: inline-block;
-    padding:9px 8px 6px;
-    line-height: 1;
-    border-radius: 4px;
-    color:#088178;
-    background-color: red;
-}
-#feature .report img{
-    width: 70%;
-    margin-bottom: 10px;
-}
-#head {
+.navigation-arrow {
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     display: flex;
-    padding:20px 80px;
     align-items: center;
-    justify-content:space-between;
-    box-shadow: 0 5px 15px rgb(0,0,0,0.06); 
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: background-color 0.3s;
+}
 
+.navigation-arrow:hover {
+    background-color: rgba(0,0,0,0.7);
 }
-#head img{
-    width: 30%;
-}
-#ed h2,h4{
-    text-align: center;
-}
-#head p{
-    text-align: justify;
-    font-size:20px;
-}
-#act .health{
-    width: 210px ;
-    text-align:center;
-    padding:25px 15px;
-    box-shadow:20px 20px 34px rgb(0,0,0,0.03);
-    border: 1px solid #cce7d0;
-    border-radius:4px;
-    margin:15px 0;
-}
-#act .health:hover{
-    box-shadow: 10 10px 54px rgba(70,62,221,0.1); 
 
+.navigation-arrow.left {
+    left: 0;
 }
-#act .health h6{
-    display: inline-block;
-    padding:9px 8px 6px;
-    line-height: 1;
-    border-radius: 4px;
-    color:#088178;
-    background-color: orange;
-}
-#act .health img{
-    width: 100%;
-    margin-bottom: 10px;
-}
-#act{
-    display:flex;
-    align-items:center;
-    flex-wrap:wrap;
-    padding:20px 80px;
-    justify-content: space-between;
-}
-#act .health:nth-child(6) img {
-    width: 120%;
-    margin-bottom: 10px;
 
+.navigation-arrow.right {
+    right: 0;
 }
-#case {
+
+.disease-container {
     display: flex;
-    
-    padding:50px 80px;
-    align-items: center;
-    justify-content:space-between;
-    box-shadow: 0 5px 15px rgb(0,0,0,0.06); 
-    top:0;
-    left:0;
-    
-
+    overflow: hidden;
+    gap: 20px;
+    width: calc(100% - 100px);
+    scroll-behavior: smooth;
 }
-footer {
+
+.disease-card {
+    min-width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.disease-card:hover {
+    transform: scale(1.05);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.search-container {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px;
+    width: 50%;
+    justify-self: center;
+}
+
+#searchInput {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#searchButton {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
     background-color: green;
-    padding: 50px 20px;
-    text-align: center;
-   
-}
-.buttonC{
-    display: flex; /* Use flexbox for layout */
-    gap: 10px; /* Space between buttons */
-    margin-top: 20px; /* Top margin for spacing */
-    justify-content: center;
-    align-items: center;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
-.action-button {
-    background-color: #007BFF; /* Button background color */
-    color: white; /* Text color */
-    border: none; /* Remove border */
-    padding: 10px 20px; /* Padding */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 5px; /* Rounded corners */
-    display: flex; /* Flexbox for alignment */
-    align-items: center; /* Center items vertically */
+.sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
 }
 
-.action-button i {
-    margin-right: 8px; /* Space between icon and text */
+.sidebar a:hover {
+    color: #f1f1f1;
+    background-color: #333;
+}
+#dd{
+    justify-content: flex-end;
 }
 
-.action-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+.content {
+    transition: margin-left .5s;
+    padding: 40px;
+}
+
+.menu-content {
+    display: none;
+    padding: 20px;
+    background-color: #f1f1f1;
+    margin-top: 20px;
+}
+
+.popup-wrapper {
+    position: relative;
+}
+
+/* Trigger button */
+.popup-trigger {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup-trigger:hover {
+    background-color: #2980b9;
+}
+
+/* Popup form */
+.popup-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: white;
+    width: 800px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: 0.3s ease;
+    opacity: 0;
+}
+
+/* Overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+/* Popup form inputs */
+.popup-form input,
+.popup-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.popup-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Close button */
+.clo-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+}
+
+.clo-btn:hover {
+    color: #333;
+}
+
+/* Submit button */
+.submit-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #27ae60;
+}
+
+/* Checkbox hack */
+#popup-checkbox {
+    display: none;
+}
+
+#popup-checkbox:checked ~ .popup-form {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+#popup-checkbox:checked ~ .popup-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+img{
+    width: 10%;
 }
