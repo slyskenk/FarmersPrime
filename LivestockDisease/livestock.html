@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+        
+    <title>Livestock</title>
+    
+</head>
+<body>
+    <section id="header">
+        <button class="openbtn" onclick="openNav()">☰</button>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        
+        <a href="diseaseRep\diseaseReporting.html" onclick="">Report Disease</a>
+        <a href="health/health.html" onclick="showContent('resources')">Health Resources</a>
+    </div>
+
+        <div>
+            <ul id="navbar">
+                
+                <li><a href="homePage.html"> Home</a></li>
+                <li><a class ="active "href="livestockDisease.html">Disease</a></li>
+                <li><a href="marketPage.html">Market</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="contactdetails.html">Contact</a></li>
+            </ul>
+
+        </div>
+    
+</section>
+    <div class="content">
+      
+    </div>
+
+        
+    <section id="dd">
+
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search diseases...">
+        <button id="searchButton" onclick="searchDiseases()">Search</button>
+        <label for="popup-checkbox" class="popup-trigger">
+            Add 
+        </label>
+
+    </div>
+        <div class="popup-wrapper">
+            <!-- Checkbox for toggling popup -->
+            <input type="checkbox" id="popup-checkbox">
+            
+            <!-- Trigger button -->
+           
+            <!-- Popup Form -->
+            <div class="popup-form">
+                <button class="clo-btn" onclick="document.getElementById('popup-checkbox').checked = false;">
+                    ×
+                </button>
+    
+                <h2>Disease Information Form</h2>
+                
+                <form>
+                    <label for="disease-name">Disease Name</label>
+                    <input type="text" id="disease-name" name="disease-name" required>
+
+                    <textarea type="text" id="disease-desc" name="disease-desc" rows="10"  placeholder="Enter a description"required></textarea>
+                    <label for="symptoms">Symptoms</label>
+                    <textarea id="symptoms" name="symptoms" rows="4" required></textarea>
+                    
+                    <label for="treatment">Treatment</label>
+                    <textarea id="treatment" name="treatment" rows="4" required></textarea>
+                    
+                    <label for="image-url">Image URL</label>
+                    <input type="url" id="image-url" name="image-url">
+                    
+                    <button type="submit" class="submit-btn">Submit Disease Information</button>
+                </form>
+            </div>
+    
+            <!-- Overlay -->
+            <div class="popup-overlay"></div>
+        </div>
+    <div class="container">
+        <button class="navigation-arrow left" onclick="scrollCards('left')">
+            &#10094;
+        </button>
+        
+        <div class="disease-container" id="diseaseContainer">
+            <!-- Disease Cards will be dynamically added here -->
+        </div>
+        
+        <button class="navigation-arrow right" onclick="scrollCards('right')">
+            &#10095;
+        </button>
+    </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

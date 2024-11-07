@@ -3,80 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health </title>
+    <title>Livestock Management System</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
+   
 </head>
 <body>
-
-<header>
-    <button onclick="window.history.back()" class="go-back-btn">
-        <i class="fas fa-arrow-left"></i> 
-    </button>
-    <h1>Health Records</h1>
-</header>
-
-
-    <section id="ed" class="section-p1">
-        
-
-        <h4>Action for Animal Health</h4> 
-        </section>
-        <section id="head">
-        
-        <p> Effective livestock care involves a comprehensive approach that 
-            prioritizes animal health, well-being, and productivity. Key components include
-             providing a balanced diet and access to clean water, conducting regular health assessments, 
-             and ensuring timely vaccinations to prevent disease. Additionally, maintaining clean and comfortable 
-             living environments, utilizing gentle handling techniques, and understanding the specific behaviors of different 
-             species are essential for reducing stress and promoting welfare. Accurate record-keeping for health and breeding 
-             is crucial for informed management decisions. Furthermore, ensuring the maintenance of equipment and tools enhances
-              safety, while preparedness for emergencies and basic first aid knowledge are vital for effective response to potential
-               crises. Overall, these practices collectively contribute to a sustainable and efficient livestock management system.</p><br>      
-     </section>
-     <section>
-     <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search..." />
-        <button id="searchButton"><i class="fas fa-search"></i>Search</button>
-        <button class="icon-button"><i class="fas fa-plus"></i> Add</button>
-        <button class="icon-button">
-            <i class="fas fa-edit"></i> Edit
+    <header>
+        <button onclick="window.history.back()" class="go-back-btn">
+            <i class="fas fa-arrow-left"></i> 
         </button>
-        <button class="icon-button">
-            <i class="fas fa-trash"></i> Delete
-        </button>
-        
+        <h1>Health Resources</h1>
+    </header>
 
+    <div class="main-content">
+        <div class="record-section">
+            <button id="addRecord">Add New Record</button>
+            <div class="records-carousel">
+                <div class="carousel-container" id="recordsContainer">
+                    <!-- Records will be added here dynamically -->
+                </div>
+                <div class="carousel-buttons">
+                    <button id="prevBtn">Previous</button>
+                    <button id="nextBtn">Next</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="educational-resources">
+            <h3>Educational Resources</h3>
+            <div id="resultsContainer" class="results-container"></div>
+            
+            <div class="care-guidelines">
+               
+    
+                <section id="feature" class="section-p1">
+                    <div class="health">
+                           
+                                <h6 onclick="showMaintenance('cattle')">Cattle</h6>
+                    </div>
+                    <div class="health" >
+                            
+                                <h6 onclick="showMaintenance('sheep')">Sheep</h6>
+                    </div>
+                    <div class="health"  > 
+                          
+                                <h6 onclick="showMaintenance('goats')">Goats</h6>
+                            </div>
+                    <div class="health">
+                            
+                             <h6  onclick="showMaintenance('pigs')">Pigs</h6>
+                            </div>
+                        <div id="maintenanceInfo" class="maintenance-info"></div>
+                
+                </section>
+            </div>
+            
+
+        </div>
+
+        
     </div>
-   
-    </section>
-    <div id="resultsContainer" class="results-container"></div>
-    
-    <section id="feature" class="section-p1">
-        <div class="health">
-                 <img class="livestock-item" onclick="showMaintenance('cattle')" src="..\..\images\cattle.jpg" alt="Cattle">
-                    <h6>Cattle</h6>
-        </div>
-        <div class="health">
-                <img class="livestock-item" onclick="showMaintenance('sheep')" src="..\..\images\sheep.jpg" alt="Sheep">
-                    <h6>Sheep</h6>
-        </div>
-        <div class="health"> 
-                <img class="livestock-item" onclick="showMaintenance('goats')" src="..\..\images\goat.jpg" alt="Goats">
-                    <h6>Goats</h6>
+
+    <div class="modal" id="recordModal">
+        <div class="modal-content">
+            <h2>Add New Record</h2>
+            <form id="recordForm">
+                <div class="form-group">
+                    <label for="animalType">Animal Type:</label>
+                    <select id="animalType" required>
+                        <option value="">Select animal type</option>
+                        <option value="cattle">Cattle</option>
+                        <option value="sheep">Sheep</option>
+                        <option value="goat">Goat</option>
+                        <option value="pig">Pig</option>
+                    </select>
                 </div>
-        <div class="health">
-                <img class="livestock-item" onclick="showMaintenance('pigs')" src="..\..\images\pigs.jpg" alt="Pigs">
-                 <h6>Pigs</h6>
+                <div class="form-group">
+                    <label for="dateOfRecord">Date:</label>
+                    <input type="date" id="dateOfRecord" required>
                 </div>
-            <div id="maintenanceInfo" class="maintenance-info"></div>
-    
-    </section>
-    
+                <div class="form-group">
+                    <label for="notes">Notes:</label>
+                    <textarea id="notes" rows="4" required></textarea>
+                </div>
+                <button type="submit">Save Record</button>
+                <button type="button" class="close-btn" id="closeModal">Close</button>
+            </form>
+        </div>
+    </div>
+
+
     <script src="script.js"></script>
-    <footer>
-        All rights reserved
-    </footer>
-    </body>
+
+   
+</body>
 </html>
