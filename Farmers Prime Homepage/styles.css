@@ -1,0 +1,138 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure html and body take full height */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling with Background Image */
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url('homepage img 2.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+/* Logo Styling */
+.logo img {
+    width: 160px;
+    margin-top: -4px;
+    margin-left: -50px;
+}
+
+/* Header Styling */
+header {
+    background: rgba(9, 153, 45, 0.7);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation Styling */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #FFD700;
+}
+
+header nav ul li a:active {
+    color: #FF4500;
+}
+
+/* Main Section */
+main {
+    flex: 1; /* Makes main content area expand to take up available space */
+    padding: 60px 20px 40px; /* Top padding to avoid overlap with fixed header */
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 60%;
+    margin: 200px auto 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+/* Section Headings (e.g., Welcome to My Website, About Us, Our Services) */
+main h2 {
+    color: #4CAF50; /* Green color for section titles */
+    margin-bottom: 15px;
+}
+
+/* Section Content */
+main p {
+    color: #333; /* Default color for content text */
+}
+
+/* About Us and Our Services Sections */
+section {
+    margin-bottom: 30px; /* Space between sections */
+}
+
+/* Add a background color for each section */
+.intro, .about, .services {
+    background-color: #e8f5e9; /* Light green background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #010701(0, 0, 0, 0.1); /* Light shadow for sections */
+}    
+
+/* Section Styling */
+main .intro {
+    margin-bottom: 70px; /* Reduced space below the 'Welcome' section */
+}
+
+main .about, .services {
+    margin-top: 50px; /* Reduced space above the 'About Us' section */
+}
+/* Footer Styling */
+footer {
+    background-color: rgba(9, 153, 45, 0.7);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+}
+/* Contact Us Page Styling */
+#contact {
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 60%;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-details h2 {
+    margin-bottom: 15px;
+    color: #4CAF50; /* Green color for the heading */
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
