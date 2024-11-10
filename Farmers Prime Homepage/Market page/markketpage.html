@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers Prime</title>
+    <link rel="stylesheet" href="slyza.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+        /* Your provided CSS code here */
+    </style>
+</head>
+<body>
+
+    <!-- Side Menu -->
+    <div id="menu">
+        <div class="logo">
+            <img src="blob:https://web.whatsapp.com/530acbc3-4cce-410e-a5ae-d5e24b145964" alt="Farmers Prime Logo">
+            <h2>Farmers Prime</h2>
+        </div>
+        <ul class="items">
+            <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fas fa-info-circle"></i> About Us</a></li>
+            <li><a href="#"><i class="fas fa-phone"></i> Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Interface -->
+    <div id="interface">
+        <div class="navigation">
+            <div class="n1">
+                <div id="menu-btn"><i class="fas fa-bars"></i></div>
+                <div class="search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search livestock...">
+                </div>
+            </div>
+            <div class="profile">
+                <i class="fas fa-user-circle"></i>
+                <img src="profile.jpg" alt="User Profile">
+            </div>
+        </div>
+
+        <!-- Page Title -->
+        <div class="i-name">
+            <h1>Farmers Market</h1>
+        </div>
+
+        <!-- Livestock Cards -->
+        <div class="values">
+            <!-- Cattle -->
+            <div class="val-box" onclick="showDetails('Cattle', 'Vaccinated', '3 years', 'Angus')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Cow_female_black_white.jpg" alt="Cattle">
+                <h3>Cattle</h3>
+                <span>Price: N$10000</span>
+            </div>
+
+            <!-- Sheep -->
+            <div class="val-box" onclick="showDetails('Sheep', 'Not Vaccinated', '1 year', 'Merino')">
+                <img src="https://t4.ftcdn.net/jpg/03/12/95/13/360_F_312951336_8LxW7gBLHslTnpbOAwxFo5FpD2R5vGxu.jpg" alt="Sheep">
+                <h3>Sheep</h3>
+                <span>Price: $1500</span>
+            </div>
+
+                 <!-- goat-->
+                 <div class="val-box" onclick="showDetails('Goat', 'Vaccinated', '2 year', 'Alphine')">
+                    <img src="https://assets.farmsanctuary.org/content/uploads/2020/05/27054636/2018_10-23_FSNY_Racecar_goat_DSC_5147_Credit_Farm-Sanctuary-1600x1068.jpg" alt="Goat">
+                    <h3>Sheep</h3>
+                    <span>Price: $900</span>
+                </div>
+
+            <!-- Poultry Division -->
+            <div class="val-box" onclick="showDetails('Chicken', 'Vaccinated', '6 months', 'Broiler')">
+                <img src="https://a-z-animals.com/media/2022/01/shutterstock_227823334.jpg" alt="Chicken">
+                <h3>Chicken</h3>
+                <span>Price: $150</span>
+            </div>
+            <div class="val-box" onclick="showDetails('Duck', 'Vaccinated', '1 year', 'Pekin')">
+                <img src="https://media.4-paws.org/b/8/d/5/b8d5441fec6b84e9c3cba899549b84bb0f193fff/VIER%20PFOTEN_2019-07-18_013-2890x2000.jpg" alt="Duck">
+                <h3>Duck</h3>
+                <span>Price: $180</span>
+            </div>
+            <div class="val-box" onclick="showDetails('Guinea Fowl', 'Vaccinated', '1 year', 'Helmeted')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtIT4sPU6_PE9F0euvKU35PiVrCpZ37Gqwqw&s" alt="Guinea Fowl">
+                <h3>Guinea Fowl</h3>
+                <span>Price: $300</span>
+            </div>
+            <div class="val-box" onclick="showDetails('Rabbit', 'Vaccinated', '2 years', 'New Zealand')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Oryctolagus_cuniculus_Tasmania_2_%28cropped%29.jpg/800px-Oryctolagus_cuniculus_Tasmania_2_%28cropped%29.jpg" alt="Rabbit">
+                <h3>Rabbit</h3>
+                <span>Price: $250</span>
+            </div>
+            <div class="val-box" onclick="showDetails('Ostrich', 'Vaccinated', '3 years', 'Common Ostrich')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_vTkF_OgIQu00W8li5ja_hyNyhA_CGSP0nQ&s" alt="Ostrich">
+                <h3>Ostrich</h3>
+                <span>Price: $6000</span>
+            </div>
+
+            <!-- Horses and Donkeys -->
+            <div class="val-box" onclick="showDetails('Horse', 'Vaccinated', '5 years', 'Arabian')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6sf0BPv_sjSiVeeF-Afd3xhQL0EtcmA1bbA&s" alt="Horse">
+                <h3>Horse</h3>
+                <span>Price: $7500</span>
+            </div>
+            <div class="val-box" onclick="showDetails('Donkey', 'Not Vaccinated', '4 years', 'Wild African')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Donkey_in_Clovelly%2C_North_Devon%2C_England.jpg/640px-Donkey_in_Clovelly%2C_North_Devon%2C_England.jpg" alt="Donkey">
+                <h3>Donkey</h3>
+                <span>Price: $1500</span>
+            </div>
+
+            <!-- Pig -->
+            <div class="val-box" onclick="showDetails('Pig', 'Vaccinated', '2 years', 'Berkshire')">
+                <img src="https://www.bing.com/images/blob?bcid=qE-zQRcxSq4HxA" alt="Pig">
+                <h3>Pig</h3>
+                <span>Price: $800</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Animal Details Modal -->
+    <div id="modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#fff; padding:20px; border-radius:10px; box-shadow:0px 4px 8px rgba(0, 0, 0, 0.1);">
+        <h2 id="animal-name"></h2>
+        <p><strong>Vaccination Status:</strong> <span id="vaccination-status"></span></p>
+        <p><strong>Age:</strong> <span id="animal-age"></span></p>
+        <p><strong>Breed:</strong> <span id="animal-breed"></span></p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+
+    <script>
+        function showDetails(name, vaccinated, age, breed) {
+            document.getElementById("animal-name").innerText = name;
+            document.getElementById("vaccination-status").innerText = vaccinated;
+            document.getElementById("animal-age").innerText = age;
+            document.getElementById("animal-breed").innerText = breed;
+            document.getElementById("modal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
