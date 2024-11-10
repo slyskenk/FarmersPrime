@@ -20,7 +20,7 @@ body {
 
 /* Header styles */
 header {
-  background-color: #14b8a6;
+  background-color: green;
   color: white;
   padding: 1rem 0;
 }
@@ -90,7 +90,7 @@ main {
 }
 
 .tab.active {
-  background-color: #14b8a6;
+  background-color: #00ff0d;
   color: white;
 }
 
@@ -141,7 +141,7 @@ main {
 }
 
 .add-stock-btn {
-  background-color: #14b8a6;
+  background-color:#00ff0d;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -264,7 +264,7 @@ main {
 }
 
 .message-item.unread {
-  border-left: 4px solid #14b8a6;
+  border-left: 4px solid#00ff0d;
 }
 
 .message-avatar {
