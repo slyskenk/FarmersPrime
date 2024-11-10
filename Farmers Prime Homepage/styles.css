@@ -32,7 +32,7 @@ body {
 
 /* Header Styling */
 header {
-    background: rgba(9, 153, 45, 0.7);
+    background: #056e4e;
     color: white;
     padding: 10px 20px;
     display: flex;
@@ -78,7 +78,7 @@ main {
 }
 /* Section Headings (e.g., Welcome to My Website, About Us, Our Services) */
 main h2 {
-    color: #4CAF50; /* Green color for section titles */
+    color: #056e4e; /* Green color for section titles */
     margin-bottom: 15px;
 }
 
@@ -110,7 +110,7 @@ main .about, .services {
 }
 /* Footer Styling */
 footer {
-    background-color: rgba(9, 153, 45, 0.7);
+    background-color: #056e4e;
     color: white;
     text-align: center;
     padding: 20px;
@@ -129,7 +129,7 @@ footer {
 
 .contact-details h2 {
     margin-bottom: 15px;
-    color: #4CAF50; /* Green color for the heading */
+    color: #056e4e; /* Green color for the heading */
 }
 
 .contact-details p {
