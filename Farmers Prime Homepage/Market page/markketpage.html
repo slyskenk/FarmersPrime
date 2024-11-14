@@ -15,16 +15,16 @@
     <!-- Side Menu -->
     <div id="menu">
         <div class="logo">
-            <img src="blob:https://web.whatsapp.com/530acbc3-4cce-410e-a5ae-d5e24b145964" alt="Farmers Prime Logo">
+            <img src="/images/logoTrans.png" alt="Farmers Prime Logo" width="80px" height="50px">
             <h2>Farmers Prime</h2>
         </div>
         <ul class="items">
             <nav>
                 <ul>
-                    <li><i class="fa-solid fa-chart-simple"></i><a href="/AdminDash/Farmers Prime Homepage/index.html">Homepage</a></li>
+                    <li><i class="fa-solid fa-chart-simple"></i><a href="/Farmers Prime Homepage/index.html">Homepage</a></li>
                     <li><i class="fa-brands fa-uikit"></i><a href="/AdminDash/adminDash.html">Dashboard</a></li>
-                    <li><i class="fa-solid fa-table"></i><a href="/AdminDash/Farmers Prime Homepage/Market page/markketpage.html">Market</a></li>
-                    <li><i class="fa-solid fa-disease"></i><a href="/AdminDash/LivestockDisease/livestock.html">Disease</a></li>
+                    <li><i class="fa-solid fa-table"></i><a href="/Farmers Prime Homepage/Market page/markketpage.html">Market</a></li>
+                    <li><i class="fa-solid fa-disease"></i><a href="/LivestockDisease/livestock.html">Disease</a></li>
                     <li><i class="fa-solid fa-file-waveform"></i><a href="/AdminDash/LivestockDisease/diseaseRep/diseaseReporting.html">Report</a></li>
                     <li><i class="fa-solid fa-box"></i></i><a href="#">Sign In</a></li>
                     <li><i class="fa-solid fa-clipboard-question"></i><a href="/AdminDash/Farmers Prime Homepage/index.html">About Us</a></li>
@@ -73,7 +73,7 @@
                  <!-- goat-->
                  <div class="val-box" onclick="showDetails('Goat', 'Vaccinated', '2 year', 'Alphine')">
                     <img src="https://assets.farmsanctuary.org/content/uploads/2020/05/27054636/2018_10-23_FSNY_Racecar_goat_DSC_5147_Credit_Farm-Sanctuary-1600x1068.jpg" alt="Goat">
-                    <h3>Sheep</h3>
+                    <h3>Goat</h3>
                     <span>Price: $900</span>
                 </div>
 
@@ -118,7 +118,7 @@
 
             <!-- Pig -->
             <div class="val-box" onclick="showDetails('Pig', 'Vaccinated', '2 years', 'Berkshire')">
-                <img src="https://www.bing.com/images/blob?bcid=qE-zQRcxSq4HxA" alt="Pig">
+                <img src="https://th.bing.com/th/id/R.f08b0f0301e93b74fffdfbeb6d0112d5?rik=zXGcQj4kYYXeoQ&riu=http%3a%2f%2f3.bp.blogspot.com%2f-w4HPj6o-wzw%2fTmIjsQ5bQzI%2fAAAAAAAAAvc%2f1vf3nKra0T0%2fs1600%2fpig_3.jpg&ehk=W3C8VntRY2iKzCl6S9fjopLbDIe2psWZ%2bGPPXE%2fnvP0%3d&risl=&pid=ImgRaw&r=0" alt="Pig">
                 <h3>Pig</h3>
                 <span>Price: $800</span>
             </div>
@@ -146,6 +146,25 @@
         function closeModal() {
             document.getElementById("modal").style.display = "none";
         }
+    </script>
+    
+    <script>
+        function searchLivestock() {
+            const searchTerm = document.querySelector('.search input').value.toLowerCase();
+            const livestockCards = document.querySelectorAll('.val-box');
+            
+            livestockCards.forEach(card => {
+                const livestockName = card.querySelector('h3').textContent.toLowerCase();
+                if (livestockName.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Add event listener to search input
+        document.querySelector('.search input').addEventListener('input', searchLivestock);
     </script>
 </body>
 </html>
